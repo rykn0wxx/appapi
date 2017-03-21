@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  _id: 1
+  region_name: MyString
+  region_code: MyString
+  region_label: MyString
+  active: false
+
+two:
+  _id: 1
+  region_name: MyString
+  region_code: MyString
+  region_label: MyString
+  active: false

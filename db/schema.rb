@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319152832) do
+ActiveRecord::Schema.define(version: 20170320220546) do
 
   create_table "appkeys", force: :cascade do |t|
     t.string   "acl_token"
@@ -18,6 +18,40 @@ ActiveRecord::Schema.define(version: 20170319152832) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["role_id"], name: "index_appkeys_on_role_id"
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.integer  "_id"
+    t.string   "client_name"
+    t.integer  "project_id"
+    t.integer  "region_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.boolean  "active"
+    t.index ["client_name"], name: "index_clients_on_client_name", unique: true
+    t.index ["project_id"], name: "index_clients_on_project_id"
+    t.index ["region_id"], name: "index_clients_on_region_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer  "_id"
+    t.string   "project_name"
+    t.string   "project_code"
+    t.boolean  "active"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["project_name"], name: "index_projects_on_project_name", unique: true
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.integer  "_id"
+    t.string   "region_name"
+    t.string   "region_code"
+    t.string   "region_label"
+    t.boolean  "active"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["region_name"], name: "index_regions_on_region_name", unique: true
   end
 
   create_table "roles", force: :cascade do |t|

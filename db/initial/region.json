@@ -1,0 +1,25 @@
+[{
+	"_id":1,
+	"region_name": "Asia Pacific",
+	"region_code": "APAC",
+	"region_label": "APAC",
+	"active":true
+}, {
+	"_id":2,
+	"region_name": "Europe",
+	"region_code": "EMEA",
+	"region_label": "EMEA",
+	"active":true
+}, {
+	"_id":3,
+	"region_name": "North America",
+	"region_code": "NA",
+	"region_label": "North America",
+	"active":true
+}, {
+	"_id":4,
+	"region_name": "South America",
+	"region_code": "SA",
+	"region_label": "LATAM",
+	"active":true
+}]

@@ -1,15 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# defaultRoles = ['public','admin']
-# #
+# defaultRoles = ['public','user','admin']
+# # #
 # Role.delete_all
 # Appkey.delete_all
 # defaultRoles.each do |role|
 #   zRole = Role.where(:name => role).create
 #   Appkey.create!(:acl_token => SecureRandom.hex, :role => zRole)
 # end
+#
+# User.create!(username:'rykn0wxx',role_id:3,active:true)
+
+# zRegion = JSON.parse(File.read('db/initial/region.json'))
+# Region.destroy_all
+# Region.create!(zRegion)
+#
+# zProject = JSON.parse(File.read('db/initial/project.json'))
+# Project.destroy_all
+# Project.create!(zProject)
+
+# zClient = JSON.parse(File.read('db/initial/client.json'))
+# Client.destroy_all
+# Client.create!(zClient)

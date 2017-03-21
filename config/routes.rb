@@ -4,9 +4,8 @@ Appapi::Application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
     namespace :v1, constraints: ApiConstraints.new(version: 1, default: true) do
-      jsonapi_resources :roles
       jsonapi_resources :users
-      # jsonapi_resources :appkeys
+      jsonapi_resources :projects
     end
   end
 
