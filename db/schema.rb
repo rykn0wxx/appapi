@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320220546) do
+ActiveRecord::Schema.define(version: 20170321061903) do
 
   create_table "appkeys", force: :cascade do |t|
     t.string   "acl_token"
@@ -41,6 +41,20 @@ ActiveRecord::Schema.define(version: 20170320220546) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["project_name"], name: "index_projects_on_project_name", unique: true
+  end
+
+  create_table "raw_executives", force: :cascade do |t|
+    t.string   "month"
+    t.integer  "client_id"
+    t.float    "revenue"
+    t.float    "ebit"
+    t.float    "fte"
+    t.integer  "ticket"
+    t.integer  "sla_scope"
+    t.integer  "sla_attain"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_raw_executives_on_client_id"
   end
 
   create_table "regions", force: :cascade do |t|

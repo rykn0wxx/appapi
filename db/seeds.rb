@@ -20,3 +20,7 @@
 # zClient = JSON.parse(File.read('db/initial/client.json'))
 # Client.destroy_all
 # Client.create!(zClient)
+
+# zExec = JSON.parse(File.read('db/initial/executives.json'))
+# RawExecutive.destroy_all
+# RawExecutive.create!(zExec)

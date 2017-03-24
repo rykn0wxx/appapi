@@ -1,5 +1,5 @@
 class Api::V1::BaseController < JSONAPI::ResourceController
-  # before_action :authorize!
+  # before_action :authorize!+
 
   def authorize!
     hdr = request.headers["Authorization"]
