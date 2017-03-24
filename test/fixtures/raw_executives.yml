@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  client: one
+  revenue: 1.5
+  ebit: 1.5
+  fte: 1.5
+  ticket: 1
+  sla_scope: 1
+  sla_attain: 1
+
+two:
+  month: MyString
+  client: two
+  revenue: 1.5
+  ebit: 1.5
+  fte: 1.5
+  ticket: 1
+  sla_scope: 1
+  sla_attain: 1
