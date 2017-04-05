@@ -1,0 +1,48 @@
+_id,project_name,project_code,active
+1,Acosta,Acosta,TRUE
+2,Alcoa,Alcoa,TRUE
+3,Alvarez and Marsal,Alvarez and Marsal,TRUE
+4,Amcor,Amcor,TRUE
+5,BCG,BCG,TRUE
+6,Brown-Forman,Brown-Forman,TRUE
+7,CEC,CEC,TRUE
+8,CNH,CNH,TRUE
+9,Covance,Covance,TRUE
+10,Duke,Duke,TRUE
+11,E&Y,E&Y,TRUE
+12,Embraer,Embraer,TRUE
+13,Epsilon,Epsilon,TRUE
+14,Essilor,Essilor,TRUE
+15,Evoqua,Evoqua,TRUE
+16,Ferro,Ferro,TRUE
+17,Hanon,Hanon,TRUE
+18,Honda,Honda,TRUE
+19,Huron,Huron,TRUE
+20,Infineum,Infineum,TRUE
+21,John Deere,John Deere,TRUE
+22,Joy,Joy,TRUE
+23,Kraft/Heinz,Kraft/Heinz,TRUE
+24,Louis Vuitton,Louis Vuitton,TRUE
+25,MasterCard,MasterCard,TRUE
+26,NBA,NBA,TRUE
+27,Novelis,Novelis,TRUE
+28,Reydel,Reydel,TRUE
+29,Route One,Route One,TRUE
+30,Swagelok,Swagelok,TRUE
+31,TSI,TSI,TRUE
+32,Vallourec,Vallourec,TRUE
+33,Visteon,Visteon,TRUE
+34,Bio-Rad,Bio-Rad,TRUE
+35,Clariant,Clariant,TRUE
+36,CLS,CLS,TRUE
+37,Coca Cola,Coca Cola,TRUE
+38,Firmenich,Firmenich,TRUE
+39,Ledvance,Ledvance,TRUE
+40,Linde,Linde,TRUE
+41,Merck-Serono,Merck-Serono,TRUE
+42,Orbitz,Orbitz,TRUE
+43,OSRAM,OSRAM,TRUE
+44,PMI,PMI,TRUE
+45,SAPA,SAPA,TRUE
+46,Sulzer,Sulzer,TRUE
+47,TRW,TRW,TRUE
