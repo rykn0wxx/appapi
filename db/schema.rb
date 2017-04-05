@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170321061903) do
+ActiveRecord::Schema.define(version: 20170402043559) do
 
   create_table "appkeys", force: :cascade do |t|
     t.string   "acl_token"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20170321061903) do
     t.index ["client_name"], name: "index_clients_on_client_name", unique: true
     t.index ["project_id"], name: "index_clients_on_project_id"
     t.index ["region_id"], name: "index_clients_on_region_id"
+  end
+
+  create_table "mudapis", force: :cascade do |t|
+    t.string   "app_name"
+    t.string   "app_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|

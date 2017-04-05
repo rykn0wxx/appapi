@@ -3,4 +3,5 @@ class Api::V1::UserResource < Api::V1::ApplicationResource
 
   has_one :role
 
+  filters :user_id, :username
 end

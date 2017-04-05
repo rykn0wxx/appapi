@@ -2,7 +2,7 @@ Rails.application.configure do
 
   config.cache_classes = false
 
-  config.eager_load = true
+  config.eager_load = false
 
   config.consider_all_requests_local = false
 
@@ -14,9 +14,9 @@ Rails.application.configure do
   }
 
   # Don't care if the mailer can't send.
-  config.action_mailer.default_url_options = { :host => 'devise-token-auth-demo.dev' }
+  config.action_mailer.default_url_options = { :host => 'localhost', :port => 3000 }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => 'devise-token-auth-demo.dev', :port => 1025 }
+  config.action_mailer.smtp_settings = { :address => 'localhost', :port => 1025 }
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false

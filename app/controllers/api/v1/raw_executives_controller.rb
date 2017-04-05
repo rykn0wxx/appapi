@@ -6,10 +6,10 @@ class Api::V1::RawExecutivesController < Api::V1::BaseController
 
       if Appkey.exists?(acl_token: token)
         zExec = RawExecutive
-          .select('raw_executives.*, clients.client_name, regions.region_name, regions.region_code, regions.region_label')
-          .joins('INNER JOIN clients on clients.id = raw_executives.client_id')
+          .select("'raw_executives'.*, clients.client_name, regions.region_name, regions.region_code, regions.region_label")
+          .joins('INNER JOIN clients on clients.id = "raw_executives".client_id')
           .joins('INNER JOIN regions on clients.region_id = regions.id')
-          .where(clients: { active: true })
+          # .where(clients: { active: true })
         render json: zExec
       else
         render(status: :unauthorized, json:{errors:[{

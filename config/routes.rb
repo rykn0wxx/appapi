@@ -1,15 +1,17 @@
-require 'api_constraints'
-
-Appapi::Application.routes.draw do
+Rails.application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
-    namespace :v1, constraints: ApiConstraints.new(version: 1, default: true) do
+    namespace :v1 do
       jsonapi_resources :users
+
       jsonapi_resources :roles
       jsonapi_resources :projects
+
       jsonapi_resources :raw_executives
+      jsonapi_resources :mudapis
     end
   end
+
 
   # jsonapi_resource :roles
   # get 'index' => 'home#index', :as => 'home'

@@ -8,5 +8,5 @@ class Api::V1::ProjectsController < Api::V1::BaseController
       .where(clients: { active: true })
     render json: zProj
   end
-  
+
 end
