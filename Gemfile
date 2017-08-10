@@ -9,11 +9,9 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
-
 gem 'puma', '~> 3.0'
-
 gem 'jbuilder', '~> 2.5'
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', github: 'codahale/bcrypt-ruby', :require => 'bcrypt'
 gem 'rack-cors'
 
 group :development, :test do
